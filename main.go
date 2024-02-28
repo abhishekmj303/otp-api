@@ -2,10 +2,11 @@ package main
 
 import (
 	"fmt"
-	"github.com/pquerna/otp/totp"
 	"log"
 	"net/http"
 	"time"
+
+	"github.com/pquerna/otp/totp"
 )
 
 func main() {
@@ -30,7 +31,7 @@ func main() {
 			<body>
 				<form action="/totp" method="GET">
 					<label for="secret">Secret:</label>
-					<input type="text" id="secret" name="secret">
+					<input type="password" id="secret" name="secret">
 					<input type="submit" value="Generate">
 				</form>
 			</body>
